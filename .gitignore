@@ -1,0 +1,14 @@
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor noise
+.vscode/
+.idea/
+*.swp
+*~
+
+# Render / briefing artifacts (derivations, not canon)
+.render/
+.briefing/
