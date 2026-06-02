@@ -6,7 +6,7 @@
 >
 > Companion motto: *"I don't know everything, therefore I can leverage everything."* — the outward reach of the same finite fuel.
 
-This file is the whole canon: scope, authority, the seven axioms, and the constitution that keeps the set closed and clean. It obeys its own axioms — one home, one whole goal, no ornament.
+This file is the whole canon: scope, authority, the seven axioms, and the constitution that keeps the set closed and clean. One home for the whole set — its self-application is stated once, at the end.
 
 ---
 
@@ -34,7 +34,7 @@ So the set is **flat in authority, rooted in purpose** — the purpose being *sp
 ## The fuel — three properties (premises, not rules)
 
 - **Finite** — bounded quantity. → spend it well (Aim · Divide · Extend).
-- **Volatile** — the working store clears on a reset; durable persistence needs an external store. → the loop's learning must land in SSOT before the reset; a cold start reconstructs from it.
+- **Volatile** — the working store clears on a reset; durable persistence needs an external store. → the loop's learning must land in SSOT before the reset.
 - **Irreversible** (the burn) — every action leaves a *footprint* (realized outcome + side-effects) that can't be un-left, so it must be owned: recorded to SSOT (routed by SoC), contained by Boundary, healed on the next loop.
 
 The volatile/durable duality is stated frame-neutrally; a projection names its tiers (context↔files, head↔notes).
@@ -71,41 +71,28 @@ The volatile/durable duality is stated frame-neutrally; a projection names its t
 
 **VI. Leverage** — *Reach beyond the self by any external means.*
 - **Mandates:** route to external capability — tools, information, other actors — for what exceeds your reach; spend a little attention to acquire it rather than much to do it yourself.
-- **Forbids:** pretense of self-sufficiency; re-deriving what could be routed; mistaking borrowed authority for verified fact (see Grounding).
+- **Forbids:** pretense of self-sufficiency; re-deriving what could be routed.
 
 ### Keep — how the burn's output survives
 
 **VII. Single Source of Truth** — *One reality per object per time; each truth has one home with a named scope.*
-- **Mandates:** one canonical home for any fact, state, or decision; propagate changes so no stale copy survives; a cold start reconstructs from these homes alone.
+- **Mandates:** one canonical home for any fact, state, or decision; propagate changes so no stale copy survives.
 - **Forbids:** parallel truths; duplicated state; shared mutable state; ambiguous authority; truth that lives only in a volatile store.
 
 ---
 
 ## Corollaries (derivable; named for convenience)
 
-- **Iteration** — not a corollary but the apex's *dynamic*: the loop itself (decision → action → result → learning), always in motion. The path A→B (unknown→known) is rarely straight; each sprint recalibrates (Grounding) while held to the anchor (Outcome).
+The apex's *dynamic* frames them all — **Iteration**: the loop itself (decision → action → result → learning), always in motion. The path A→B (unknown→known) is rarely straight; each sprint recalibrates (Grounding) while held to the anchor (Outcome). Iteration is the dynamic, not a corollary; the corollaries below are.
+
 - **Cold-start** — the test of SSOT's durability: a fresh actor reconstructs full state from the canonical homes alone.
 - **Decoupling** — the symptom-free state when SoC + SSOT + Boundary hold; coupling is the signal that one was violated.
 
 ---
 
-## What dissolved, and into what
-
-Five candidates failed the **residual-force test** (an axiom must add a force the others don't) and dissolved — recorded so they are not re-grafted:
-
-| Dissolved | Into |
-|---|---|
-| Finitude | fuel properties (Finite, Volatile) + Leverage |
-| Decoupling | SoC + SSOT + Boundary (emergent) |
-| Entropy / Footprint | the Irreversible property + handling via Outcome / SSOT / SoC / Boundary |
-| Fail-fast / Probe | the apex's iteration dynamic |
-| Externalize | the Volatile property + footprint → SSOT |
-
----
-
 ## Admission & self-discipline
 
-- **Residual-force admission.** A new axiom must add a force the union of the others does not — remove it and a real gap appears. No residue → corollary or property, not axiom. This closed the set at seven and dissolved the five above.
+- **Residual-force admission.** A new axiom must add a force the union of the others does not — remove it and a real gap appears. No residue → corollary or property, not axiom.
 - **Hygiene of the set:** consistent (no pair contradicts) · independent (residual force each) · frame-translates (each holds across ≥3 of person / career / AI agent / team).
 - **Self-application (Dogfood).** This document is itself a finite-actor artifact and obeys its own axioms — one home per truth (SSOT), one whole goal (Atomic), declared edges (Boundary), no ornament (Outcome-Driven). If the doc violates an axiom, the doc is wrong; fix the doc, not the axiom.
 - **Boundary of the canon.** No frame projections, examples, or named consumers live here — those belong in the consumer's repo. The canon does not know who reads it.
