@@ -6,9 +6,28 @@
 >
 > Companion motto: *"I don't know everything, therefore I can leverage everything."* — the outward reach of the same finite fuel.
 
-**Scope.** Any **finite actor pursuing a stated outcome** — a person, a slice of a life (a career, a project), an AI agent, a team. Substrate-neutral. Not all of reality — only outcome-driven work.
+This file is the whole canon: scope, authority, the seven axioms, and the constitution that keeps the set closed and clean. It obeys its own axioms — one home, one whole goal, no ornament.
 
-**Authority.** Each axiom is **stipulated**, flat-rank. The apex does not *justify* them (no foundationalist root); it *necessitates* them — remove the finite fuel and none are needed. Flat in authority, rooted in purpose. Epistemology, admission criteria, and drift guard live in [`../SEED.md`](../SEED.md).
+---
+
+## Scope
+
+Any **finite actor pursuing a stated outcome** — a person, a slice of a life (a career, a project), an AI agent, a team. Substrate-neutral. **Not all of reality** — only outcome-driven work; undirected, non-teleological reality is out of scope.
+
+Two gates, both required: the effort serves a **stated outcome**, and a **finite actor** (a bounded locus of attention) holds it.
+
+**Noun rule.** A noun is canon-legal iff it survives every instance (person ⇄ career ⇄ AI agent ⇄ team).
+- **Legal (structure-level):** actor, attention, goal / outcome, concern, context, leverage, boundary, truth, cost.
+- **Forbidden (substrate-bound → projection only):** LLM, token, context-window, subagent, code, function, ticket, KPI, headcount.
+
+Canon speaks of the **actor** generically; "agent / person / team / career" are *instances*, named only in a projection.
+
+## Authority & telos — two axes, never conflated
+
+- **Authority — flat stipulation.** Each axiom is *posited as law*; its authority comes from the posit + adoption, not from external argument and not from mutually referencing the others. Each is independently stipulated, flat rank. No axiom outranks another.
+- **Telos — the apex.** The set has an apex (attention) that **necessitates** it but does not **justify** it: remove the constraint — grant infinite fuel — and every axiom becomes unnecessary. But *necessity is not justification.* Deriving an axiom from the apex would be foundationalism — the "Axiom 0" this set forbids.
+
+So the set is **flat in authority, rooted in purpose** — the purpose being *spend finite attention well*. A teleological apex that necessitates is legal; an authority-root that justifies is not.
 
 ---
 
@@ -81,3 +100,13 @@ Five candidates failed the **residual-force test** (an axiom must add a force th
 | Entropy / Footprint | the Irreversible property + handling via Outcome / SSOT / SoC / Boundary |
 | Fail-fast / Probe | the apex's iteration dynamic |
 | Externalize | the Volatile property + footprint → SSOT |
+
+---
+
+## Admission & self-discipline
+
+- **Residual-force admission.** A new axiom must add a force the union of the others does not — remove it and a real gap appears. No residue → corollary or property, not axiom. This closed the set at seven and dissolved the five above.
+- **Hygiene of the set:** consistent (no pair contradicts) · independent (residual force each) · frame-translates (each holds across ≥3 of person / career / AI agent / team).
+- **Self-application (Dogfood).** This document is itself a finite-actor artifact and obeys its own axioms — one home per truth (SSOT), one whole goal (Atomic), declared edges (Boundary), no ornament (Outcome-Driven). If the doc violates an axiom, the doc is wrong; fix the doc, not the axiom.
+- **Boundary of the canon.** No frame projections, examples, or named consumers live here — those belong in the consumer's repo. The canon does not know who reads it.
+- Change only by deliberate, versioned amendment — never silent drift.
