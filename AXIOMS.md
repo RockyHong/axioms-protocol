@@ -6,7 +6,7 @@
 >
 > Companion motto: *"I don't know everything, therefore I can leverage everything."* — the outward reach of the same finite fuel.
 
-This file is the whole canon: the apex and fuel, scope, authority, the seven axioms, and the corollaries they imply. One home for the law itself — nothing about its own upkeep.
+This file is the whole canon: the apex and fuel, scope, authority, and the seven axioms. One home for the law itself — nothing about its own upkeep.
 
 ---
 
@@ -69,21 +69,12 @@ The volatile/durable duality is stated frame-neutrally; a projection names its t
 
 ### Extend — how the fuel reaches past its limit
 
-**VI. Leverage** — *Reach beyond the self by any external means.*
-- **Mandates:** route to external capability — tools, information, other actors — for what exceeds your reach; spend a little attention to acquire it rather than much to do it yourself.
-- **Forbids:** pretense of self-sufficiency; re-deriving what could be routed.
+**VI. Leverage** — *Source each capability by attention cost: reach outward when external means cost less than building it yourself, build when they don't.*
+- **Mandates:** weigh external capability (tools, information, other actors) against self-build by the attention it invests and risks toward the outcome; take the cheaper path; when acquiring costs less than doing, spend the little to acquire rather than the much to build.
+- **Forbids:** pretense of self-sufficiency (never weighing the external option); reflexive routing (sending out what is cheaper to build, or taking a dependency whose cost or risk outweighs its saving).
 
 ### Keep — how the burn's output survives
 
 **VII. Single Source of Truth** — *One reality per object per time; each truth has one home with a named scope.*
-- **Mandates:** one canonical home for any fact, state, or decision; propagate changes so no stale copy survives.
+- **Mandates:** one canonical home for any fact, state, or decision; propagate changes so no stale copy survives; a cold start reconstructs full state from these homes alone.
 - **Forbids:** parallel truths; duplicated state; shared mutable state; ambiguous authority; truth that lives only in a volatile store.
-
----
-
-## Corollaries (derivable; named for convenience)
-
-The apex's *dynamic* frames them all — **Iteration**: the loop itself (decision → action → result → learning), always in motion. The path A→B (unknown→known) is rarely straight; each sprint recalibrates (Grounding) while held to the anchor (Outcome). Iteration is the dynamic, not a corollary; the corollaries below are.
-
-- **Cold-start** — the test of SSOT's durability: a fresh actor reconstructs full state from the canonical homes alone.
-- **Decoupling** — the symptom-free state when SoC + SSOT + Boundary hold; coupling is the signal that one was violated.
