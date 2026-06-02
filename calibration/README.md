@@ -6,20 +6,15 @@ Working area for the top-down recalibration of the canon against the pinned seed
 
 **State = file presence.** Each phase writes its artifact here. Cold-start = read this index, then the highest-numbered artifact present.
 
-## ⏭️ NEXT SESSION — cold-start here
+## ✅ ALL PHASES DONE (0–6)
 
-**Done (Phases 0–5):** spine ratified · set closed at 7 axioms · downstream gate passed · canon written to `axioms/index.md`.
+**Done:** spine ratified · set closed at 7 axioms · downstream gate passed · canon written to `axioms/index.md` · **`SEED.md` rewritten** (authority↔telos split · substrate-neutral scope + noun rule · Drift-Guard reworded to "no foundationalist authority-root" · dissolved-five + residual-force rule recorded · Status updated · stale banner removed).
 
-**Remaining (Phase 6) — rewrite `SEED.md` to match the new design:**
-- First Principle: split *authority* (flat stipulation) from *telos* (apex = attention; it *necessitates* ≠ *justifies*) — `01-spine.md` §3.
-- Scope: finite-actor + outcome, substrate-neutral noun rule — `01-spine.md` §1.
-- Drift Guard: reword "no Axiom 0" → "no foundationalist **authority** root" (telos apex is legal).
-- Record the dissolved-five + the residual-force admission rule — `03-set.md`.
-- Update Status; then **remove the ⚠️ stale banner** from `SEED.md` top.
+**Remaining (optional):**
+- Split `axioms/index.md` into per-axiom files if a consumer needs them (until then `index.md` is the single home).
+- Verify the final SEED + axioms once more, then **clean up `calibration/`** per Operating Rule 7 (source absorption) — safe to delete now that every load-bearing claim is absorbed into SEED + axioms.
 
-**Then (optional):** split `axioms/index.md` into per-axiom files if wanted; verify; clean up `calibration/` per source-absorption (safe to delete once SEED + axioms are final).
-
-**Resume read-order:** this README → `01-spine.md` → `03-set.md` → `axioms/index.md`. Those four hold the full design.
+**Read-order for the full design:** this README → `01-spine.md` → `03-set.md` → `axioms/index.md` → `SEED.md`.
 
 ## Pipeline
 
@@ -31,7 +26,7 @@ Working area for the top-down recalibration of the canon against the pinned seed
 | 3 | The set | Finitude-split, Boundary+routing, admit/reject Grounding + Externalization; consistency/independence/frame-translation on slots. | `03-set.md` | ✅ CLOSED — 7 axioms (Outcome-Driven · Grounding · SoC · Atomic · Boundary · Leverage · SSOT). 5 dissolved, 0 added. Verification swept: consistent · independent · frame-translates. |
 | 4 | Downstream gate ⟲ | Map every projection lore file ↔ new set. Mismatch → loop to 3. | `04-downstream-fit.md` | ✅ PASS — no orphan lore, no orphan axiom; canon apex = projection apex. No loop-back. |
 | 5 | Content | Write each axiom (mandate/forbid, frame-neutral). | `axioms/index.md` | 🟢 written — self-contained canon (apex + 7 axioms + properties + mottos + corollaries + dissolved-list) |
-| 6 | Meta / SEED | Rewrite First Principle (authority↔telos split), Drift Guard, admission record, scope. | → `SEED.md` | ⬜ **NEXT SESSION** |
+| 6 | Meta / SEED | Rewrite First Principle (authority↔telos split), Drift Guard, admission record, scope. | `SEED.md` | ✅ done — authority↔telos split · scope + noun rule · residual-force admission · dissolved-five recorded · Drift-Guard reworded · banner removed |
 
 Phase 1 and 6 share their *rulings* — decided at 1 (they gate everything), written at 6.
 
