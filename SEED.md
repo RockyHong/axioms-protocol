@@ -1,5 +1,7 @@
 # axioms-protocol — SEED
 
+> ⚠️ **UNDER RECALIBRATION (2026-06-02).** A top-down rebuild is in flight — see `calibration/` (live design) and the rewritten `axioms/index.md` (Phase 5, done). This SEED's specifics — flat set with *no apex*, six axioms, all-of-reality scope — are **superseded pending the Phase 6 rewrite**. The new design: an apex (attention, as *telos* not authority-root), **7** axioms, substrate-neutral *finite-actor + outcome* scope. Until Phase 6 lands, trust `calibration/01-spine.md` + `03-set.md` + `axioms/index.md`, not this file's specifics.
+
 > This file locks alignment before any further work. Re-read before any structural change. If a proposed change contradicts this file, the change is wrong (or this file needs an explicit, deliberate amendment — never silent drift).
 
 ---
@@ -90,7 +92,7 @@ Pending audit (run before lock):
 
 ## How — Operating Rules of This Repo
 
-0. **Dogfood Supreme.** The canon must obey its own axioms. Every file in this repo is itself an artifact subject to Boundary, SSOT, Decoupling, Leverage, Entropy, Attention, Failfast, and Outcome-Driven. If the doc violates an axiom, the doc is wrong — fix the doc, not the axiom. Self-application is the deepest consistency check available; passing it is non-negotiable.
+0. **Dogfood Supreme.** The canon must obey its own axioms. Every file in this repo is itself an artifact subject to Boundary, SSOT, Decoupling, Finitude, Entropy, and Outcome-Driven. If the doc violates an axiom, the doc is wrong — fix the doc, not the axiom. Self-application is the deepest consistency check available; passing it is non-negotiable.
 
 1. **Frame-neutral language.** Axioms use only universal nouns: boundary, truth, dependency, finitude, cost, contract, cause, trace. Forbidden inside canon: agent, code, function, ticket, market, KPI, person, user — any noun that names a single frame.
 
@@ -98,16 +100,16 @@ Pending audit (run before lock):
 
 3. **No consumer enumeration.** Canon does not know who reads it. Anyone reads.
 
-4. **Versioning.** Protocol is versioned. Consumers pin. Breaking change = major bump. Coherence change = minor. Wording polish = patch.
+4. **Versioning — deferred.** Not yet released; git history is the version record. A formal version scheme + pinning is introduced only when a consumer actually needs to pin. Adding one now is premature scaffolding (Outcome-Driven).
 
 5. **Admission criteria for a new axiom.** Must satisfy all of:
    - Survives frame-translation across multiple unrelated domains.
    - Consistent with existing axioms (introduces no contradiction).
    - Independent — removal breaks the set (otherwise it is redundant, not axiomatic).
    - Stated in frame-neutral language.
-   - Posited deliberately, with version bump — never silently grafted in.
+   - Posited deliberately and recorded in git — never silently grafted in.
 
-6. **Meta vs axiom separation.** Axioms = canonical statements. Meta = epistemology (what counts as axiom, why stipulation, admission criteria, drift guards). Both live here, in distinct files.
+6. **Meta vs axiom separation.** Axioms live in `axioms/` — `index.md` holds the set (law-lines + corollaries, read together), one entry per axiom holds its mandates and forbids. Meta — epistemology (what counts as axiom, why stipulation, admission criteria, drift guards) — lives here in SEED. Distinct homes, one truth each.
 
 7. **Source absorption before removal.** Any external source material (chat logs, drafts, notes, prior conversations) that informed the canon must have its load-bearing content fully absorbed into the appropriate canon file *before* the source is removed. Distill, verify, then delete. Source is throwaway; canon is the SSOT. Never accept silent loss; never permit premature deletion. If a source cannot be safely deleted yet, that is a signal the canon is incomplete — fix the canon first.
 
@@ -131,7 +133,8 @@ Before any structural edit: re-read this SEED.
 
 ## Status
 
-- Seed updated: 2026-05-20.
+- Seed updated: 2026-05-27.
 - Audit complete. Set locked at **6** via dedup (Failfast → corollary of Outcome-Driven + Entropy; Attention → inward face of Finitude alongside Leverage as outward face).
-- Canon document: `AXIOMS.md` v1.0.0 — locked.
+- Canon: `axioms/` — `index.md` (the set) + six per-axiom entries.
+- 2026-05-27: split monolithic `AXIOMS.md` into `axioms/`. Sharpenings distilled from the harness-frame projection (`~/.claude/guidelines/axiom-principles/`) back into frame-neutral mandates — Boundary routing, Decoupling no-imported-authority, Finitude atomic-focus + surface-don't-fabricate, Entropy owned-disposal + verify-before-destroy, Outcome-Driven cut test. **Persistence** corollary added beside Failfast. Version machinery deferred (pre-release).
 - No meta document. SEED holds epistemology; splitting it out would duplicate SSOT and violate Failfast.
