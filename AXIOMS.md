@@ -6,7 +6,7 @@
 >
 > Companion motto: *"I don't know everything, therefore I can leverage everything."* — the outward reach of the same finite fuel.
 
-This file is the whole canon: scope, authority, the seven axioms, and the constitution that keeps the set closed and clean. One home for the whole set — its self-application is stated once, at the end.
+This file is the whole canon: the apex and fuel, scope, authority, the seven axioms, and the corollaries they imply. One home for the law itself — nothing about its own upkeep.
 
 ---
 
@@ -87,13 +87,3 @@ The apex's *dynamic* frames them all — **Iteration**: the loop itself (decisio
 
 - **Cold-start** — the test of SSOT's durability: a fresh actor reconstructs full state from the canonical homes alone.
 - **Decoupling** — the symptom-free state when SoC + SSOT + Boundary hold; coupling is the signal that one was violated.
-
----
-
-## Admission & self-discipline
-
-- **Residual-force admission.** A new axiom must add a force the union of the others does not — remove it and a real gap appears. No residue → corollary or property, not axiom.
-- **Hygiene of the set:** consistent (no pair contradicts) · independent (residual force each) · frame-translates (each holds across ≥3 of person / career / AI agent / team).
-- **Self-application (Dogfood).** This document is itself a finite-actor artifact and obeys its own axioms — one home per truth (SSOT), one whole goal (Atomic), declared edges (Boundary), no ornament (Outcome-Driven). If the doc violates an axiom, the doc is wrong; fix the doc, not the axiom.
-- **Boundary of the canon.** No frame projections, examples, or named consumers live here — those belong in the consumer's repo. The canon does not know who reads it.
-- Change only by deliberate, versioned amendment — never silent drift.
