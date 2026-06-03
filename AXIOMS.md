@@ -33,7 +33,7 @@ So the set is **flat in authority, rooted in purpose** — the purpose being *sp
 
 ## The fuel — three properties (premises, not rules)
 
-- **Finite** — bounded quantity. → spend it well (Aim · Divide · Extend).
+- **Finite** — bounded quantity. → spend it well.
 - **Volatile** — the working store clears on a reset; durable persistence needs an external store. → the loop's learning must land in SSOT before the reset.
 - **Irreversible** (the burn) — every action leaves a *footprint* (realized outcome + side-effects) that can't be un-left, so it must be owned: recorded to SSOT (routed by SoC), contained by Boundary, healed on the next loop.
 
@@ -43,17 +43,13 @@ The volatile/durable duality is stated frame-neutrally; a projection names its t
 
 ## The seven axioms
 
-### Aim — where the fuel points
-
 **I. Outcome-Driven** — *Every action serves a stated outcome; the outcome is the anchor that turns motion into progress.*
 - **Mandates:** declare the outcome before acting; hold to it across the loop; abandon motion that no longer serves it.
 - **Forbids:** anchorless motion (drift); ornament; just-in-case branches; speculative scaffolding.
 
-**II. Grounding** — *Claims trace to reality; turn unknown into known by probing it.*
-- **Mandates:** reason from first principles; verify against the real before building on it; take every result — success or failure — as signal that grounds the next decision.
-- **Forbids:** assumption passed off as fact; a label or authority accepted as truth; deduction substituted for contact with the real.
-
-### Divide — how the fuel is partitioned
+**II. Grounding** — *Calibrate against reality: probe the unknown into known, and weigh every claim and problem by first principles before building on it.*
+- **Mandates:** reason from first principles; verify against the real before building on it; take every result — success or failure — as the signal that corrects the next decision.
+- **Forbids:** assumption passed off as fact; a label or authority accepted as truth; deduction substituted for contact with the real; attacking a problem before probing whether it is real.
 
 **III. Separation of Concerns** — *Cut along concern seams; one concern per side, no bleed.*
 - **Mandates:** partition work so each unit owns a single concern.
@@ -67,13 +63,9 @@ The volatile/durable duality is stated frame-neutrally; a projection names its t
 - **Mandates:** declare scope and ownership; make every edge a route — "if not me, then who" (redirect, escalate, or reach to capability).
 - **Forbids:** unbounded scope; implicit ownership; a wall that blocks without redirecting; reaching across an edge into another's internals.
 
-### Extend — how the fuel reaches past its limit
-
 **VI. Leverage** — *Source each capability by attention cost: reach outward when external means cost less than building it yourself, build when they don't.*
 - **Mandates:** weigh external capability (tools, information, other actors) against self-build by the attention it invests and risks toward the outcome; take the cheaper path; when acquiring costs less than doing, spend the little to acquire rather than the much to build.
 - **Forbids:** pretense of self-sufficiency (never weighing the external option); reflexive routing (sending out what is cheaper to build, or taking a dependency whose cost or risk outweighs its saving).
-
-### Keep — how the burn's output survives
 
 **VII. Single Source of Truth** — *One reality per object per time; each truth has one home with a named scope.*
 - **Mandates:** one canonical home for any fact, state, or decision; propagate changes so no stale copy survives; a cold start reconstructs full state from these homes alone.
