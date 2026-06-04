@@ -16,3 +16,7 @@ A new axiom must add a force the union of the others does not: remove it and a r
 - **Consistent** — no pair of axioms contradicts.
 - **Independent** — each carries a residual force (the admission test, held standing).
 - **Frame-translates** — each holds across ≥3 of person / career / AI agent / team.
+
+## Propagation — before the change commits
+
+- Bump `version` in `.claude-plugin/plugin.json` in the same commit — an unbumped version leaves stale canon in the field.
