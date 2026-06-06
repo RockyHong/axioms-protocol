@@ -1,6 +1,6 @@
 # axioms-protocol — canon repo
 
-One public artifact: the **axioms plugin** — **`AXIOMS.md`**, the closed, substrate-neutral canon of finite-actor agency, and **`skills/axiom-lens/`**, the skill that loads it and audits a target against it. Every other file serves its editing.
+One public artifact: the **axioms plugin** — **`AXIOMS.md`**, the closed, substrate-neutral canon of finite-actor agency, and two skills that load it: **`skills/axiom-lens/`** (audit a named target against it) and **`skills/axiom-discuss/`** (open discussion grounded in it). Every other file serves its editing.
 
 ## Editing the canon
 
@@ -9,10 +9,11 @@ One public artifact: the **axioms plugin** — **`AXIOMS.md`**, the closed, subs
 - **Distill then delete.** Fold source material (drafts, notes, prior conversation) into the canon, verify, then delete it — nothing load-bearing lost. Git log is the history; never narrate precedent inside the canon.
 - **Amend deliberately.** Change the canon only by versioned amendment — never silent drift.
 
-## Editing the lens
+## Editing the skills
 
-- **The lens loads the canon; it never restates it.** Axiom text inside the skill body is a parallel truth — delete it and keep the runtime Read.
-- The skill stays substrate-bound (Claude Code) and consumer-facing; the canon stays substrate-neutral and reader-blind. Neither edits to fit the other.
+- **A skill loads the canon; it never restates it.** Axiom text inside a skill body is a parallel truth — delete it and keep the runtime Read.
+- Skills stay substrate-bound (Claude Code) and consumer-facing; the canon stays substrate-neutral and reader-blind. Neither edits to fit the other.
+- **Lens audits, discuss converses.** One procedure per skill (Atomic); a new consumption mode is a new skill, not a mode switch inside an existing one.
 
 ## Rules
 
