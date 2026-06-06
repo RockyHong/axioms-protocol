@@ -40,7 +40,7 @@ git log <latest-tag>..HEAD --oneline
 
 # Check if current commit == tagged commit
 git rev-parse HEAD
-git rev-parse <latest-tag>^{commit}
+git rev-parse <latest-tag>^{commit}  # (skip if no tags)
 ```
 
 ### 3. Decide
@@ -112,8 +112,8 @@ Use annotated tag. Pass message via HEREDOC.
 
 ## Rules
 
-- Never push. User pushes manually.
-- Never proceed if working tree is dirty.
-- Never delete or move existing tags.
+- Publishing belongs to the user — stop after commit + tag and report the push command.
+- Require a clean working tree — if dirty, stop and surface the state.
+- Existing tags are immutable — never delete or move them.
 - All tags are annotated (`git tag -a`).
-- No arguments to `/release` — always auto-detect.
+- Always auto-detect from git state — `/release` takes no arguments.
