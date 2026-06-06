@@ -1,6 +1,6 @@
 ---
 description: Closure gates for the axiom canon — apply before any change to AXIOMS.md commits
-globs: ["AXIOMS.md"]
+paths: ["AXIOMS.md"]
 ---
 
 # Canon governance
