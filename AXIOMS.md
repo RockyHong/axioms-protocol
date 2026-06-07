@@ -16,6 +16,8 @@ Any **finite actor pursuing a stated outcome** — a person, a slice of a life (
 
 Two gates, both required: the effort serves a **stated outcome**, and a **finite actor** (a bounded locus of attention) holds it.
 
+**Recursion.** Instances nest: any slice of a pursuit that passes both gates is itself a finite actor, and the whole canon — axioms, loop, and fuel — applies to it at that grain.
+
 **Noun rule.** A noun is canon-legal iff it survives every instance (person ⇄ career ⇄ AI agent ⇄ team).
 - **Legal (structure-level):** actor, attention, goal / outcome, concern, context, leverage, boundary, truth, cost.
 - **Forbidden (substrate-bound → projection only):** LLM, token, context-window, subagent, code, function, ticket, KPI, headcount.
