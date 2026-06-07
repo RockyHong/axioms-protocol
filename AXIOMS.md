@@ -27,7 +27,7 @@ Canon speaks of the **actor** generically; "agent / person / team / career" are 
 - **Authority — flat stipulation.** Each axiom is *posited as law*; its authority comes from the posit + adoption, not from external argument and not from mutually referencing the others. Each is independently stipulated, flat rank. No axiom outranks another.
 - **Telos — the apex.** The set has an apex (attention) that **necessitates** it but does not **justify** it: remove the constraint — grant infinite fuel — and every axiom becomes unnecessary. But *necessity is not justification.* Deriving an axiom from the apex would be foundationalism — the "Axiom 0" this set forbids.
 
-So the set is **flat in authority, rooted in purpose** — the purpose being *spend finite attention well*. A teleological apex that necessitates is legal; an authority-root that justifies is not.
+So the set is **flat in authority, rooted in purpose**. A teleological apex that necessitates is legal; an authority-root that justifies is not.
 
 ---
 
@@ -57,7 +57,7 @@ The volatile/durable duality is stated frame-neutrally; a projection names its t
 
 **IV. Atomic** — *One unit, one whole goal, one trajectory.*
 - **Mandates:** size each unit to exactly one complete goal.
-- **Forbids:** bundling many goals into one unit; fragmenting one goal across units (forces re-coordination).
+- **Forbids:** bundling many goals into one unit; fragmenting one goal across units so that no unit owns a whole one (forces re-coordination). Decomposing a goal into sub-goals — each whole to its own unit — is sizing, not fragmenting.
 
 **V. Boundary** — *A thing exists by its edge: it declares what it owns and where everything else routes.*
 - **Mandates:** declare scope and ownership; make every edge a route — "if not me, then who" (redirect, escalate, or reach to capability).
