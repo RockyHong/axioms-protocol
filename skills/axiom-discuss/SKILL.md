@@ -28,7 +28,7 @@ Load the canon, state the frame, converse. The canon grounds the conversation; t
 Before open conversation, state in a handful of bullets — drawn from the loaded text, never from memory:
 
 1. **Topic** — the subject on the table, one line.
-2. **Scope fit** — does the topic pass the canon's scope gates? An out-of-scope topic gets ordinary discussion; say so and drop the canon framing.
+2. **Scope fit** — does the topic pass the canon's scope gates, and at what grain of the pursuit does it sit? An out-of-scope topic gets ordinary discussion; say so and drop the canon framing.
 3. **Live tensions** — the axioms the topic most plausibly strains or leans on, named only. The conversation explores them; the frame just points.
 
 ## Conversation

@@ -16,7 +16,7 @@ Any **finite actor pursuing a stated outcome** — a person, a slice of a life (
 
 Two gates, both required: the effort serves a **stated outcome**, and a **finite actor** (a bounded locus of attention) holds it.
 
-**Recursion.** Instances nest: any slice of a pursuit that passes both gates is itself a finite actor, and the whole canon — axioms, loop, and fuel — applies to it at that grain.
+**Recursion.** Instances nest: any slice of a pursuit that passes both gates is itself a finite actor, and the whole canon — axioms, loop, and fuel — applies to it at that grain. Anchors chain at the seams: undertaking a sub-pursuit is an action at the parent grain, so each sub-goal serves its parent's outcome — service to the top is transitive, paid once per seam, not carried whole by every grain.
 
 **Noun rule.** A noun is canon-legal iff it survives every instance (person ⇄ career ⇄ AI agent ⇄ team).
 - **Legal (structure-level):** actor, attention, goal / outcome, concern, context, leverage, boundary, truth, cost.
