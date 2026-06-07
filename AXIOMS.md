@@ -16,10 +16,10 @@ Any **finite actor pursuing a stated outcome** — a person, a slice of a life (
 
 Two gates, both required: the effort serves a **stated outcome**, and a **finite actor** (a bounded locus of attention) holds it.
 
-**Recursion.** Instances nest: any slice of a pursuit that passes both gates is itself a finite actor, and the whole canon — axioms, loop, and fuel — applies to it at that grain. Anchors chain at the seams: undertaking a sub-pursuit is an action at the parent grain, so each sub-goal serves its parent's outcome — service to the top is transitive, paid once per seam, not carried whole by every grain.
+**Recursion.** Instances nest: any slice of a pursuit that passes both gates is itself a finite actor, and the whole canon — axioms, loop, and fuel — applies to it at that grain. Anchors chain where instances nest: because undertaking a sub-pursuit is an action at the parent grain (Axiom I), each sub-goal's anchor traces to the parent's outcome — service to the top is transitive, paid once at each nesting, not carried whole by every grain.
 
 **Noun rule.** A noun is canon-legal iff it survives every instance (person ⇄ career ⇄ AI agent ⇄ team).
-- **Legal (structure-level):** actor, attention, goal / outcome, concern, context, leverage, boundary, truth, cost.
+- **Legal (structure-level):** actor, attention, goal / outcome, pursuit, grain, concern, context, leverage, boundary, truth, cost.
 - **Forbidden (substrate-bound → projection only):** LLM, token, context-window, subagent, code, function, ticket, KPI, headcount.
 
 Canon speaks of the **actor** generically; "agent / person / team / career" are *instances*, named only in a projection.
@@ -59,7 +59,7 @@ The volatile/durable duality is stated frame-neutrally; a projection names its t
 
 **IV. Atomic** — *One unit, one whole goal, one trajectory.*
 - **Mandates:** size each unit to exactly one complete goal.
-- **Forbids:** bundling many goals into one unit; fragmenting one goal across units so that no unit owns a whole one (forces re-coordination). Decomposing a goal into sub-goals — each whole to its own unit — is sizing, not fragmenting.
+- **Forbids:** bundling many goals into one unit; fragmenting one goal across units so that no unit owns a whole one (forces re-coordination).
 
 **V. Boundary** — *A thing exists by its edge: it declares what it owns and where everything else routes.*
 - **Mandates:** declare scope and ownership; make every edge a route — "if not me, then who" (redirect, escalate, or reach to capability).

@@ -19,7 +19,7 @@ Hold a target against the axioms canon. Surface concerns and insights; route jud
 
 ## Procedure
 
-1. Restate the target's stated outcome in one line — at the target's own grain. A sub-pursuit is audited against its own outcome plus one seam up (does it serve its parent's outcome?), never against a distant ancestor's. No stated outcome is itself the first concern (Axiom I) — surface it and continue.
+1. Restate the target's stated outcome in one line — at the target's own grain. A sub-pursuit is audited against its own outcome plus one nesting up (does it serve its parent's outcome?), never against a distant ancestor's. No stated outcome is itself the first concern (Axiom I) — surface it and continue.
 2. Hold the target against the apex, the fuel properties, and each of the seven axioms, in order, at that grain.
 3. Report only grounded findings. Each finding cites the axiom, the observed evidence in the target, and why that evidence strains the axiom. An axiom with no finding gets silence — a forced finding is assumption passed off as fact (Axiom II).
 4. Insights are findings too: places where the target aligns with an axiom in a non-obvious, load-bearing way.
