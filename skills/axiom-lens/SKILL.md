@@ -19,11 +19,14 @@ Hold a target against the axioms canon. Surface concerns and insights; route jud
 
 ## Procedure
 
-1. Restate the target's stated outcome in one line — at the target's own grain. A sub-pursuit is audited against its own outcome plus one nesting up (does it serve its parent's outcome?), never against a distant ancestor's. No stated outcome is itself the first concern (Axiom I) — surface it and continue.
-2. Hold the target against the apex, the fuel properties, and each of the seven axioms, in order, at that grain.
-3. Report only grounded findings. Each finding cites the axiom, the observed evidence in the target, and why that evidence strains the axiom. An axiom with no finding gets silence — a forced finding is assumption passed off as fact (Axiom II).
-4. Insights are findings too: places where the target aligns with an axiom in a non-obvious, load-bearing way.
-5. Antipatterns are named as *possible*, paired with the observation that suggests them — the observation is the claim, the pattern is the hypothesis.
+1. **Scope gate.** Confirm the target passes the canon's two gates — a finite actor pursuing a stated outcome (AXIOMS.md § Scope). Fail either gate → name which, drop the canon framing, and route to ordinary review; the axioms do not apply and the lens does not run.
+2. **Pin the anchor — never silently.** Restate the target's stated outcome in one line, at its own grain (its own outcome plus one nesting up — does it serve its parent's? — never a distant ancestor). State it as the anchor the audit measures against, so a wrong reading is visible and correctable.
+   - **Ambiguous** between plausible readings → surface the options and confirm before auditing; a silently-assumed anchor makes every finding measure the wrong target (Axiom II).
+   - **Absent** → that is itself the first concern (Axiom I): surface it, route to `axiom-discuss` to form one, and continue against the axioms that do not depend on the anchor.
+3. Hold the target against the apex, the fuel properties, and each of the seven axioms, in order, at that grain.
+4. Report only grounded findings. Each finding cites the axiom, the observed evidence in the target, and why that evidence strains the axiom. An axiom with no finding gets silence — a forced finding is assumption passed off as fact (Axiom II).
+5. Insights are findings too: places where the target aligns with an axiom in a non-obvious, load-bearing way.
+6. Antipatterns are named as *possible*, paired with the observation that suggests them — the observation is the claim, the pattern is the hypothesis.
 
 ## Output shape
 
@@ -34,4 +37,5 @@ Hold a target against the axioms canon. Surface concerns and insights; route jud
 
 ## Edges
 
-- Scope is reflection against the canon. Requests to amend the canon route to the canon repo's governance. Review needs outside the axioms route to ordinary code or document review.
+- Requests to amend the canon route to the canon repo's governance.
+- Out-of-scope targets and review needs outside the axioms route to ordinary code or document review (scope gate, step 1).

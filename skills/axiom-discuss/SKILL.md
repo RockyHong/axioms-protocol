@@ -1,6 +1,6 @@
 ---
 name: axiom-discuss
-description: Load the axioms canon and enter open discussion grounded in it. Loads AXIOMS.md, states a short frame (topic, scope fit, live tensions), then hands control back — no audit procedure, no findings report, no verdicts. Use when the user wants to think through a topic, design, or decision with the canon in context. For a structured audit of a named target, use axiom-lens instead.
+description: Load the axioms canon and enter open discussion grounded in it. Loads AXIOMS.md, states a short frame (topic, scope fit, anchor, live tensions), then hands control back — no audit procedure, no findings report, no verdicts. Use when the user wants to think through a topic, design, or decision with the canon in context. For a structured audit of a named target, use axiom-lens instead.
 ---
 
 # Axiom Discuss
@@ -29,7 +29,8 @@ Before open conversation, state in a handful of bullets — drawn from the loade
 
 1. **Topic** — the subject on the table, one line.
 2. **Scope fit** — does the topic pass the canon's scope gates, and at what grain of the pursuit does it sit? An out-of-scope topic gets ordinary discussion; say so and drop the canon framing.
-3. **Live tensions** — the axioms the topic most plausibly strains or leans on, named only. The conversation explores them; the frame just points.
+3. **Anchor** — what settling this would resolve, one line; where the direction is genuinely open, say so rather than inventing one (Axiom II). Mid-session, inherit the anchor already in play and confirm it in passing. Naming the anchor frames the talk; it does not gate it.
+4. **Live tensions** — the axioms the topic most plausibly strains or leans on, named only. The conversation explores them; the frame just points.
 
 ## Conversation
 
