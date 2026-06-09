@@ -18,7 +18,7 @@ The cold agent cannot ask you anything mid-run, so target and anchor are fixed h
 
 1. **Scope gate.** Confirm the target passes the canon's two gates — a finite actor pursuing a stated outcome (AXIOMS.md § Scope). Fail either gate → name which, drop the canon framing, route to ordinary review; do not dispatch.
 2. **Pin the anchor — never silently.** Restate the target's outcome in one line, at its own grain (its own outcome plus one nesting up — does it serve its parent's? — never a distant ancestor).
-   - **Clear** → state it; if the target or anchor was inferred rather than given by the user, confirm both before dispatching. Only an explicit instruction proceeds without a confirm.
+   - **Clear** → state it. An explicit target/anchor proceeds. An inferred one is confirmed before dispatch as a *redirectable proposal* — restate the inference and the session evidence it rests on, so the user can correct it, not merely affirm it; a bare yes/no rubber-stamps a wrong target (Axiom II).
    - **Ambiguous** between plausible readings → surface the options and confirm with the user before dispatching; a wrong anchor makes every finding measure the wrong target (Axiom II).
    - **Absent** → that is itself the first concern (Axiom I): surface it and route to `load` to form one; do not invent an anchor to dispatch against.
 3. **Resolve the dispatch inputs.** Derive the absolute path to `AXIOMS.md` from the base directory named in this skill's invocation (two levels above it = the plugin root) and pass it — the cold agent cannot resolve a relative reference. Resolve the target too: file paths, or the target text serialized inline when it lives only in the session (the cold agent holds no session context).
