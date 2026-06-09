@@ -1,18 +1,18 @@
 ---
-name: axiom-discuss
-description: Load the axioms canon and enter open discussion grounded in it. Loads AXIOMS.md, states a short frame (topic, scope fit, anchor, live tensions), then hands control back — no audit procedure, no findings report, no verdicts. Use when the user wants to think through a topic, design, or decision with the canon in context. For a structured audit of a named target, use axiom-lens instead.
+name: load
+description: Load the axioms canon and enter open discussion grounded in it. Loads AXIOMS.md, states a short frame (topic, scope fit, anchor, live tensions), then hands control back — no audit procedure, no findings report, no verdicts. Use when the user wants to think through a topic, design, or decision with the canon in context. For a structured fresh-context audit of a named target, use `audit` instead.
 ---
 
-# Axiom Discuss
+# Load — Canon-Grounded Discussion
 
 Load the canon, state the frame, converse. The canon grounds the conversation; this skill runs no procedure on it.
 
-## When to use vs axiom-lens
+## When to use vs `audit`
 
 | Situation | Use |
 |---|---|
-| "Audit / sanity-check this artifact against the axioms" — structured findings on a named target | `axiom-lens` |
-| "Think this through with the axioms in context" — open deliberation, direction unsettled | **`axiom-discuss`** (this skill) |
+| "Audit / sanity-check this artifact against the axioms" — structured findings on a named target | `audit` |
+| "Think this through with the axioms in context" — open deliberation, direction unsettled | **`load`** (this skill) |
 
 ## Load the canon
 
@@ -41,6 +41,6 @@ Before open conversation, state in a handful of bullets — drawn from the loade
 
 ## Edges
 
-- A request to *audit* a named target routes to `axiom-lens`.
+- A request to *audit* a named target routes to `audit`.
 - A request to *amend* the canon routes to the canon repo's governance.
 - A discussion the canon cannot ground routes to ordinary conversation or the consumer repo's own deliberation skills.

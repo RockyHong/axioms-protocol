@@ -5,7 +5,7 @@
     {
       "name": "axioms",
       "source": "./",
-      "description": "The axioms canon plus two skills: axiom-lens audits a target against it, axiom-discuss opens a discussion grounded in it."
+      "description": "The axioms canon plus two skills: audit holds a target against it in a fresh context, load opens a discussion grounded in it."
     }
   ]
 }

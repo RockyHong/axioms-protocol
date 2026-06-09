@@ -1,6 +1,6 @@
 # axioms-protocol — canon repo
 
-One public artifact: the **axioms plugin** — **`AXIOMS.md`**, the closed, substrate-neutral canon of finite-actor agency, and two skills that load it: **`skills/axiom-lens/`** (audit a named target against it) and **`skills/axiom-discuss/`** (open discussion grounded in it). Every other file serves its editing.
+One public artifact: the **axioms plugin** — **`AXIOMS.md`**, the closed, substrate-neutral canon of finite-actor agency, and two skills: **`skills/audit/`** (dispatch a fresh-context audit of a named target against it) and **`skills/load/`** (open discussion grounded in it). Every other file serves its editing.
 
 ## Editing the canon
 
@@ -13,7 +13,8 @@ One public artifact: the **axioms plugin** — **`AXIOMS.md`**, the closed, subs
 
 - **A skill loads the canon; it never restates it.** Axiom text inside a skill body is a parallel truth — delete it and keep the runtime Read.
 - Skills stay substrate-bound (Claude Code) and consumer-facing; the canon stays substrate-neutral and reader-blind. Neither edits to fit the other.
-- **Lens audits, discuss converses.** One procedure per skill (Atomic); a new consumption mode is a new skill, not a mode switch inside an existing one.
+- **`audit` dispatches a cold check; `load` converses.** One procedure per skill (Atomic); a new consumption mode is a new skill, not a mode switch inside an existing one.
+- **`audit` stays fresh-context** — it pins target + anchor interactively, then dispatches a cold subagent to hold the target; never refactor it to audit in-context.
 
 ## Rules
 
