@@ -35,7 +35,7 @@ Before open conversation, state in a handful of bullets — drawn from the loade
 ## Conversation
 
 - **Loaded canon is canonical.** If memory contradicts the loaded text, trust the text.
-- **Ground every canon claim in the loaded text.** Cite the axiom by number and name. Where the canon is silent on a concern, say so explicitly.
+- **Ground every canon claim in the loaded text — lead with the point, hang the cite behind it as drillable backing.** Where the canon is silent on a concern, say so explicitly.
 - **Tensions go to the human.** Where axioms pull against each other, surface the trade-off; the human judges.
 - **No prescribed output.** No findings table, no verdict, no forced shape — the conversation follows the user.
 

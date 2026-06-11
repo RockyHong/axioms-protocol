@@ -40,6 +40,8 @@ Spawn one fresh subagent, **model `sonnet`** (judgment work; escalate tier only 
 
 The report is a fresh-eye second opinion; weigh each finding against context only this session holds. Per finding: **apply**, **falsify** against the target, or **reject with rationale**. Close by routing judgment to the human — the audit does not score, rank, pass, or fail the target.
 
+**Render for the human, not the model.** The report's `axiom · evidence · strain` is the cold agent's proof-of-work — agent-facing. Don't pass it through raw. Surface each kept finding as one sharp plain claim: the consequence for the target's outcome, in the human's terms, one idea each. The axiom cite rides behind as drillable backing, never the headline.
+
 ## Edges
 
 - A request for open discussion rather than a structured audit routes to `load`.
