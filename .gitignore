@@ -12,3 +12,6 @@ desktop.ini
 # Render / briefing artifacts (derivations, not canon)
 .render/
 .briefing/
+
+# Temp consumer-facing projection (not canon)
+axioms-onepager.html
