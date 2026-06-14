@@ -2,7 +2,7 @@
   "name": "axioms",
   "displayName": "Axioms",
   "description": "The closed, substrate-neutral canon of finite-actor agency (AXIOMS.md) plus two skills: audit holds a target against it in a fresh context, load opens a discussion grounded in it.",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "author": { "name": "Rocky Hong" },
   "repository": "https://github.com/RockyHong/axioms-protocol",
   "license": "MIT",
