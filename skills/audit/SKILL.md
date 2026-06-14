@@ -26,7 +26,7 @@ The cold agent cannot ask you anything mid-run, so target and anchor are fixed h
 
 ## Dispatch spec — the cold subagent
 
-Spawn one fresh subagent, **model `sonnet`** (judgment work; escalate tier only with a named reason). Its prompt carries four blocks:
+Spawn one fresh `general-purpose` subagent, **model `sonnet`** (judgment work; escalate tier only with a named reason). Its prompt carries four blocks:
 
 - **Load (run cold):** Read `AXIOMS.md` at the absolute path provided. If unreadable, stop and report the failure — an audit from a remembered or paraphrased canon is invalid; do not produce one.
 - **Target:** the target text / file paths provided, plus the **fixed anchor** (the one-line outcome at its grain). Audit the target itself; no authoring rationale is included, by design.
