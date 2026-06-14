@@ -1,6 +1,6 @@
 # axioms-protocol — canon repo
 
-One public artifact: the **axioms plugin** — **`AXIOMS.md`**, the closed, substrate-neutral canon of finite-actor agency, and two skills: **`skills/audit/`** (dispatch a fresh-context audit of a named target against it) and **`skills/load/`** (open discussion grounded in it). Every other file serves its editing.
+One public artifact: the **axioms plugin** — **`AXIOMS.md`**, the closed, substrate-neutral canon of finite-actor agency; two skills, **`skills/audit/`** (dispatch a fresh-context audit of a named target against it) and **`skills/load/`** (open discussion grounded in it); and one agent, **`agents/audit-probe`** — the cold read-only auditor `audit` dispatches (internal plumbing, not a user-invoked surface). Every other file serves its editing.
 
 ## Editing the canon
 
@@ -15,6 +15,7 @@ One public artifact: the **axioms plugin** — **`AXIOMS.md`**, the closed, subs
 - Skills stay substrate-bound (Claude Code) and consumer-facing; the canon stays substrate-neutral and reader-blind. Neither edits to fit the other.
 - **`audit` dispatches a cold check; `load` converses.** One procedure per skill (Atomic); a new consumption mode is a new skill, not a mode switch inside an existing one.
 - **`audit` stays fresh-context** — it pins target + anchor interactively, then dispatches a cold subagent to hold the target; never refactor it to audit in-context.
+- **`audit`'s hold-protocol homes in `agents/audit-probe`** — loaded on spawn, not restated in the skill body (parallel-truth rule); the skill dispatches and supplies only path + target + anchor. The probe's read-only contract is its toolset (`Read`/`Grep`/`Glob`, no Edit/Write/Bash), not prose — never widen it.
 
 ## Rules
 

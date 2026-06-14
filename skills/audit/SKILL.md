@@ -26,15 +26,13 @@ The cold agent cannot ask you anything mid-run, so target and anchor are fixed h
 
 ## Dispatch spec — the cold subagent
 
-Spawn one fresh `general-purpose` subagent, **model `sonnet`** (judgment work; escalate tier only with a named reason). Its prompt carries four blocks:
+Spawn the `axioms:audit-probe` agent — a read-only cold auditor that owns the load protocol, hold procedure, and return contract, so the dispatch supplies only:
 
-- **Load (run cold):** Read `AXIOMS.md` at the absolute path provided. If unreadable, stop and report the failure — an audit from a remembered or paraphrased canon is invalid; do not produce one.
-- **Target:** the target text / file paths provided, plus the **fixed anchor** (the one-line outcome at its grain). Audit the target itself; no authoring rationale is included, by design.
-- **Hold procedure:** hold the target against the apex, the fuel properties, and each of the seven axioms, in order, at the anchor's grain.
-  - Report only grounded findings — each cites the axiom, the observed evidence in the target, and why that evidence strains the axiom. An axiom with no finding gets silence; a forced finding is assumption passed off as fact (Axiom II).
-  - Insights are findings too: where the target aligns with an axiom in a non-obvious, load-bearing way.
-  - Antipatterns are named as *possible*, paired with the observation that suggests them — the observation is the claim, the pattern is the hypothesis.
-- **Return contract:** a findings report only — concerns (axiom · evidence · strain), insights (axiom · evidence · what it enables), optional proposals (options with trade-offs, plural where the canon allows more than one resolution). No verdict, no score, no pass/fail. Read-only — report, never edit.
+- **AXIOMS.md path** — the absolute path resolved in step 3; the agent reads the canon cold and holds no session context.
+- **Target** — the target text / file paths, never the authoring rationale; that blindness is the audit's value.
+- **Anchor** — the fixed one-line outcome at its grain, pinned in step 2.
+
+Designate the model at dispatch (`sonnet` default — judgment work; escalate tier only with a named reason).
 
 ## Disposition (main loop)
 
