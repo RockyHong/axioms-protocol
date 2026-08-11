@@ -15,3 +15,9 @@ desktop.ini
 
 # Temp consumer-facing projection (not canon)
 axioms-onepager.html
+
+# tldr derivations (throwaway, not canon)
+.tldr/
+
+# Human-facing prose projections (drafts, not canon)
+drafts/
