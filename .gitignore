@@ -21,3 +21,11 @@ axioms-onepager.html
 
 # Human-facing prose projections (drafts, not canon)
 drafts/
+
+# journey-simulation walkthrough narrations (temporal, not canon)
+docs/walkthroughs/
+# served tooling for this session (not canon)
+.claude/skills/journey-simulation/
+.claude/agents/walkthrough-narrator.md*
+.claude/guidelines/
+.claude/.ccm-version
