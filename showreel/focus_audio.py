@@ -1,4 +1,4 @@
-# Procedural score for FOCUS. Every sound is placed from focus_cues.json, which focus.js exports from
+# Procedural score for FOCUS: a continuous music bed plus sound design. Every sound is placed from focus_cues.json, which focus.js exports from
 # the same constants that drive the picture (`node render.mjs cues focus_cues.json`), so sync is exact.
 # usage: python3 focus_audio.py [focus_cues.json] [focus_audio.wav]
 import json, sys, wave
@@ -146,6 +146,121 @@ place(whoosh(0.4, False), ol - 0.35, 0.3)
 place(af_beep(2400), ol + 0.2, 0.4)
 place(pad([NOTE(57), NOTE(64), NOTE(69), NOTE(73)], DUR - ol, a=0.3, rel=2.5, bright=2000), ol, 0.14)
 place(bell(NOTE(69), 3.0) + bell(NOTE(76), 3.0) * 0.7, cues['outroText'], 0.22)
+
+
+# =====================================================================================
+# MUSIC: a continuous score under the sound design. 120 BPM, A minor ↔ C major.
+# Each section's downbeat is pinned to a picture cue, so the arrangement turns when the story does.
+# =====================================================================================
+BEAT = 0.5
+ML = np.zeros(N); MR = np.zeros(N)          # melodic bus (ducked by the kick)
+DL = np.zeros(N); DR = np.zeros(N)          # drum bus
+KICKS = []
+def put(bus, sig, t, g=1.0, pan=0.0):
+    i = int(round(t * SR))
+    if i >= N or i + len(sig) <= 0 or i < 0: return
+    j = min(N, i + len(sig)); x = sig[: j - i] * g
+    bus[0][i:j] += x * np.sqrt(0.5 * (1 - pan)); bus[1][i:j] += x * np.sqrt(0.5 * (1 + pan))
+MUS, DRM = (ML, MR), (DL, DR)
+CH = {  # voicings (midi) + bass root
+    'Am': ([57, 60, 64, 71], 45), 'F': ([57, 60, 65, 69], 41), 'C': ([55, 60, 64, 67], 48), 'G': ([55, 59, 62, 67], 43),
+    'E': ([56, 59, 64, 68], 40), 'Dm': ([57, 62, 65, 69], 38), 'Fmaj7': ([57, 60, 64, 65], 41), 'Cadd9': ([55, 60, 62, 64], 48),
+}
+def saw(f, d): t = tt(d); return 2 * ((t * f) % 1) - 1
+def pluck(f, d=0.35, bright=3200):
+    x = saw(f, d) + 0.5 * saw(f * 1.005, d)
+    return filt(x, 'lowpass', bright) * env(len(x), 0.002, d / 3.5)
+def bass_note(f, d, drive=1.4):
+    x = np.tanh(drive * (saw(f, d) + 0.6 * np.sin(2 * np.pi * f / 2 * tt(d))))
+    return filt(x, 'lowpass', 520) * np.minimum(1, tt(d) / 0.01) * np.clip((d - tt(d)) / 0.05, 0, 1)
+def snare(): return mix(noise(0.22, 1200, 9000, 0.001, 0.06), 0.6 * sine(190, 0.12, 0.001, 0.04))
+def clap():
+    out = np.zeros(int(0.25 * SR))
+    for o in (0, 0.01, 0.021): i = int(o * SR); n = noise(0.25 - o, 900, 7000, 0.0005, 0.012 if o < 0.02 else 0.07); out[i:i + len(n)] += n
+    return out
+def hat(dec=0.03, g=1.0): return noise(0.08, 7000, None, 0.0005, dec) * g
+
+def section(t0, t1, chords, bars_per_chord=0.5, pad_g=0.0, pad_bright=1600, arp=None, arp_g=0.0, arp_oct=1,
+            bass=None, bass_g=0.0, drums=None, drum_g=1.0, ramp=(1, 1)):
+    """chords cycle every `bars_per_chord` bars (1 bar = 4 beats). arp: step in beats. bass: 'pulse' | 'long' | None.
+    drums: 'four' | 'half' | 'light' | 'build' | None. ramp: gain at start/end of the section."""
+    cl = bars_per_chord * 4 * BEAT
+    k, t = 0, t0
+    while t < t1 - 1e-3:
+        d = min(cl, t1 - t); name = chords[k % len(chords)]; notes, root = CH[name]
+        g = lerp_(ramp[0], ramp[1], (t - t0) / max(1e-3, t1 - t0))
+        if pad_g: put(MUS, pad([NOTE(n) for n in notes], d + 0.25, a=min(0.4, d / 3), rel=0.3, bright=pad_bright), t, pad_g * g)
+        if arp:
+            seq = notes + [n + 12 for n in notes[:2]]; st = arp * BEAT
+            for j, tb in enumerate(np.arange(t, t + d - 1e-3, st)):
+                n = seq[j % len(seq)] + 12 * (arp_oct - 1)
+                put(MUS, pluck(NOTE(n), 0.3), tb, arp_g * g, pan=0.35 * np.sin(j * 1.3))
+                put(MUS, pluck(NOTE(n), 0.3), tb + 3 * st / 2, arp_g * g * 0.28, pan=-0.5)     # dotted echo
+        if bass == 'pulse':
+            for tb in np.arange(t, t + d - 1e-3, BEAT / 2): put(MUS, bass_note(NOTE(root - 12), BEAT / 2 * 0.9), tb, bass_g * g)
+        elif bass == 'long':
+            put(MUS, bass_note(NOTE(root - 12), d * 0.98, 1.1), t, bass_g * g)
+        t += cl; k += 1
+    if drums:
+        nb = int(round((t1 - t0) / BEAT))
+        for b in range(nb):
+            tb = t0 + b * BEAT; g = lerp_(ramp[0], ramp[1], b / max(1, nb)) * drum_g
+            if drums == 'four':
+                put(DRM, kick(0.4, 140, 45), tb, 0.9 * g); KICKS.append(tb)
+                if b % 2 == 1: put(DRM, clap(), tb, 0.45 * g)
+                put(DRM, hat(0.025), tb + BEAT / 2, 0.25 * g); put(DRM, hat(0.015), tb + BEAT / 4, 0.1 * g); put(DRM, hat(0.015), tb + 3 * BEAT / 4, 0.1 * g)
+            elif drums == 'half':
+                if b % 4 == 0: put(DRM, kick(0.5, 120, 40), tb, 0.85 * g); KICKS.append(tb)
+                if b % 4 == 2: put(DRM, snare(), tb, 0.4 * g)
+                put(DRM, hat(0.02), tb, 0.12 * g); put(DRM, hat(0.02), tb + BEAT / 2, 0.08 * g)
+            elif drums == 'light':
+                if b % 2 == 0: put(DRM, kick(0.35, 120, 50), tb, 0.6 * g); KICKS.append(tb)
+                put(DRM, hat(0.02), tb + BEAT / 2, 0.16 * g)
+                if b % 4 == 3: put(DRM, clap(), tb, 0.25 * g)
+        if drums == 'build':
+            steps = int((t1 - t0) / (BEAT / 4))
+            for j in range(steps):
+                u = j / max(1, steps); put(DRM, snare(), t0 + j * BEAT / 4, (0.08 + 0.35 * u ** 2) * drum_g)
+                if j % 4 == 0: put(DRM, kick(0.3, 130, 50), t0 + j * BEAT / 4, 0.6 * drum_g); KICKS.append(t0 + j * BEAT / 4)
+def lerp_(a, b, u): return a + (b - a) * min(1, max(0, u))
+
+A_ = cues['arrive'][0]; HOME = cues['huntSpan'][1]; SW = cues['swipe'][0]; F0, F1 = cues['flood1']; LK = cues['lock']; HT = cues['hit']; END = cues['dur']
+build_len = 4 * BEAT
+# A · goal: a quiet promise
+section(0.0, A_, ['Am', 'F'], bars_per_chord=1, pad_g=0.16, pad_bright=1300, arp=0.5, arp_g=0.08, arp_oct=2,
+        bass='long', bass_g=0.14, ramp=(0.7, 1))
+section(cues['bracketIn'], A_, ['Am'], bars_per_chord=4, drums='light', drum_g=0.7, ramp=(0.6, 1))
+# B · everything wants your attention: frantic 16ths, four-on-the-floor
+section(A_, HOME, ['Am', 'F', 'E'], bars_per_chord=0.5, pad_g=0.10, pad_bright=1400, arp=0.25, arp_g=0.08, arp_oct=2,
+        bass='pulse', bass_g=0.16, drums='four', drum_g=0.8, ramp=(0.7, 1.1))
+# C · finite: dark half-time, the air goes out
+section(HOME, SW, ['Am', 'F', 'Dm', 'E'], bars_per_chord=1, pad_g=0.11, pad_bright=700, arp=1.0, arp_g=0.045, arp_oct=1,
+        bass='long', bass_g=0.2, drums='half', drum_g=0.7)
+# D · drop the noise: lift and build
+section(SW, F0, ['F', 'G'], bars_per_chord=0.25, pad_g=0.1, pad_bright=1800, arp=0.25, arp_g=0.06, arp_oct=2, bass='pulse', bass_g=0.14, drums='build', drum_g=0.9)
+# E · the motto: full, anthemic
+section(F0, F1, ['C', 'G', 'Am', 'F'], bars_per_chord=0.5, pad_g=0.13, pad_bright=3200, arp=0.25, arp_g=0.07, arp_oct=2,
+        bass='pulse', bass_g=0.18, drums='four', drum_g=1.0)
+# F · forget → write it down → hand it off: lighter, hopeful
+section(F1, LK, ['F', 'C', 'G', 'Am'], bars_per_chord=0.75, pad_g=0.09, pad_bright=2000, arp=0.5, arp_g=0.07, arp_oct=2,
+        bass='long', bass_g=0.15, drums='light', drum_g=0.9, ramp=(0.8, 1.1))
+# G · focus locked → the loop: driving, climbing into the hit
+section(LK, HT - build_len, ['Am', 'F', 'C', 'G'], bars_per_chord=1, pad_g=0.11, pad_bright=2400, arp=0.25, arp_g=0.07, arp_oct=2,
+        bass='pulse', bass_g=0.17, drums='four', drum_g=1.0, ramp=(0.85, 1.15))
+section(HT - build_len, HT, ['F', 'G'], bars_per_chord=0.5, pad_g=0.12, pad_bright=3500, arp=0.125, arp_g=0.06, arp_oct=2, bass='pulse', bass_g=0.17, drums='build', drum_g=1.0)
+# H · attention is all you need: resolve to C, then let it ring out on the name
+section(HT, cues['outroLock'], ['Cadd9', 'F', 'G', 'C'], bars_per_chord=0.65, pad_g=0.14, pad_bright=3500, arp=0.25, arp_g=0.06, arp_oct=2,
+        bass='long', bass_g=0.18, drums='four', drum_g=0.75, ramp=(1.0, 0.8))
+section(cues['outroLock'], END, ['Fmaj7', 'Cadd9'], bars_per_chord=1, pad_g=0.12, pad_bright=2200, arp=0.5, arp_g=0.05, arp_oct=2, bass='long', bass_g=0.12, ramp=(1, 0.3))
+
+# sidechain: the melodic bus breathes with the kick
+duck = np.ones(N); tt_ = np.arange(int(0.35 * SR)) / SR; shape = 1 - 0.55 * np.exp(-tt_ / 0.09)
+for tk in KICKS:
+    i = int(tk * SR); j = min(N, i + len(shape))
+    if 0 <= i < N: duck[i:j] = np.minimum(duck[i:j], shape[: j - i])
+ML *= duck; MR *= duck
+# sound design sits on top of the music, a touch lower
+L = 0.6 * L + ML + DL; R = 0.6 * R + MR + DR
 
 # ---------- master: room, glue, level ----------
 ir_n = int(1.4 * SR); ir = rng.standard_normal(ir_n) * np.exp(-np.arange(ir_n) / SR / 0.32); ir[0] = 0
