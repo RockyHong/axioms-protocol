@@ -4,4 +4,4 @@ node_modules/
 *.log
 stills/
 /s[0-9].png
-focus_cues.json
+*_cues.json
