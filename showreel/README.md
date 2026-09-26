@@ -30,4 +30,14 @@ PAGE=focus.html node render.mjs stills 5,12.3,20                  # PNG stills i
 python3 sheet.py 0 30 s1.png                                      # contact sheet from ./stills (needs Pillow)
 ```
 
+## Sound (FOCUS)
+
+`focus_audio.py` synthesizes the score procedurally (numpy/scipy). It places every sound from the cue sheet that `focus.js` exports from its own timing constants, so picture and sound share one source of truth.
+
+```sh
+PAGE=focus.html node render.mjs cues focus_cues.json     # event times, in video seconds
+python3 focus_audio.py focus_cues.json focus_audio.wav    # needs numpy + scipy
+ffmpeg -i axioms-focus_social.mp4 -i focus_audio.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -shortest axioms-focus_social_audio.mp4
+```
+
 Override tool locations with `PLAYWRIGHT`, `CHROME` and `FFMPEG` when they are not on the default paths. For a lighter social file: `ffmpeg -i axioms-focus_master.mp4 -c:v libx264 -crf 20 -preset slow -pix_fmt yuv420p -movflags +faststart axioms-focus_social.mp4`.

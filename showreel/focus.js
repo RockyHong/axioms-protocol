@@ -118,6 +118,7 @@ const T_RET = { 6: 11.32, 9: 11.57, 10: 11.82, 11: 12.07, 1: 18.8, 2: 18.95, 4: 
 const T_HAND = { 0: [18.2, 18.7], 1: [19.75, 20.15], 2: [20.45, 20.85] };
 const BENCH = { NOTES: { x: 200, y: 1690 }, EXPERT: { x: 540, y: 1690 }, AI: { x: 880, y: 1690 } };
 const T_BENCH = { EXPERT: 19.6, AI: 20.3 };
+const T_WORK = { EXPERT: 20.15, AI: 20.85 };   // helper's own bracket locks onto the handed-off task
 const BENCH_LABEL = { EXPERT: 'SOMEONE WHO KNOWS', AI: 'AI AGENT' };
 // aim / loop
 const LS = [26.0, 27.9, 29.6, 31.1], LD = [1.9, 1.7, 1.5, 1.3];
@@ -357,7 +358,7 @@ function drawCard(t) {
 function drawBench(t, key) {
   const b = BENCH[key], t0 = T_BENCH[key]; const p = E.outBack(tw(t, t0, t0 + 0.28, E.lin)); if (p <= 0) return;
   const fade = 1 - tw(t, 23.0, 23.5); if (fade <= 0) return;
-  const work = key === 'EXPERT' ? 20.15 : 20.85; const d = t - work, bump = d > 0 && d < 0.3 ? Math.sin(d / 0.3 * Math.PI) : 0;
+  const work = T_WORK[key]; const d = t - work, bump = d > 0 && d < 0.3 ? Math.sin(d / 0.3 * Math.PI) : 0;
   ctx.save(); ctx.globalAlpha = fade; ctx.translate(b.x, b.y - bump * 20); ctx.scale(p, p);
   ctx.fillStyle = 'rgba(34,36,46,1)'; ctx.strokeStyle = 'rgba(255,255,255,0.15)'; ctx.lineWidth = 4;
   ctx.beginPath(); ctx.roundRect(-92, -92, 184, 184, 36); ctx.fill(); ctx.stroke();
@@ -543,6 +544,40 @@ function renderFrame(tOut) {
   }
 }
 window.renderFrame = renderFrame;
+
+// ---------- sound cues: every audible event, read from the same constants the picture uses ----------
+function unwarp(ts) {                  // script time → output (video) time
+  let s = 0, o = 0;
+  for (const [a, b, r] of WARP) {
+    if (ts < a) return o + (ts - s);
+    o += a - s; s = a;
+    if (ts < b) return o + (ts - a) / r;
+    o += (b - a) / r; s = b;
+  }
+  return o + (ts - s);
+}
+window.cueSheet = () => {
+  const U = x => Math.round(unwarp(x) * 1000) / 1000, K = o => Object.keys(o).map(Number);
+  const loop = [0, 1, 2, 3].map(i => { const [pd, pa, pr] = PH(i); return { decide: U(LS[i]), act: U(LS[i] + pd * LD[i]), result: U(LS[i] + pa * LD[i]), learn: i < 3 ? U(LS[i] + pr * LD[i]) : null }; });
+  return {
+    dur: DUR,
+    goal: U(0.1), bracketIn: U(0.25),
+    captions: [0.5, 2.2, 6.25, 9.0, 10.6, 16.15, 19.65, 23.85].map(U),
+    arrive: ARRIVE_ORDER.map(k => U(ITEMS[k].arr)),
+    hunt: BR_EV.filter(([et, , d]) => d === 0.07).map(([et]) => U(et)),
+    huntSpan: [U(5.1), U(6.1)],
+    yank: YANK_SEQ.map(k => U(T_YANK[k] + 0.32)),
+    swipe: K(T_SWIPE).map(k => U(T_SWIPE[k])),
+    ret: K(T_RET).map(k => U(T_RET[k] + 0.3)).sort((a, b) => a - b),
+    flood1: [U(12.4), U(15.7)], wall: U(13.9), statement: [U(12.75), U(14.65)],
+    lost: THOUGHTS.filter(th => th.lost).map(th => U(th.t)),
+    caught: THOUGHTS.filter(th => !th.lost).map(th => U(th.t + 0.25)),
+    forgetsFall: [U(17.35), U(17.85)], cardSlam: U(17.3), typing: [U(17.9), U(18.5)], absorbed: U(T_HAND[0][1]),
+    bench: Object.values(T_BENCH).map(U), handoff: [T_HAND[1][0], T_HAND[2][0]].map(U), work: Object.values(T_WORK).map(U),
+    lock: U(21.6), glide: [U(23.0), U(24.2)],
+    loop, hit: U(T_HIT), flood2: U(T_HIT + 0.3), outroLock: U(36.95), outroText: U(37.15), end: DUR,
+  };
+};
 window.__ready = document.fonts.ready.then(() => Promise.all(['900 10px "Inter Tight"', '800 10px "Inter Tight"', '600 10px "Inter Tight"', '600 10px Inter', '500 10px "JetBrains Mono"'].map(f => document.fonts.load(f)))).then(() => true);
 
 if (!location.search.includes('render')) {

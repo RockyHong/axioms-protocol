@@ -26,7 +26,9 @@ await page.evaluate(() => window.__ready);
 const grab = t => page.evaluate(t => { renderFrame(t); return document.getElementById('c').toDataURL('image/png'); }, t);
 
 const [mode, arg] = process.argv.slice(2);
-if (mode === 'stills') {
+if (mode === 'cues') {                      // dump the page's sound cue sheet (output-time seconds)
+  fs.writeFileSync(path.join(root, arg), JSON.stringify(await page.evaluate(() => window.cueSheet()), null, 1));
+} else if (mode === 'stills') {
   fs.mkdirSync(path.join(root, 'stills'), { recursive: true });
   for (const t of arg.split(',').map(Number)) {
     const d = await grab(t);
