@@ -1,0 +1,154 @@
+{
+ "bpm": 128,
+ "time_signature": "4/4",
+ "bars": 8,
+ "duration_s": 15.0,
+ "beat_s": 0.46875,
+ "sections": [
+  {
+   "name": "HOOK",
+   "beats": [
+    0,
+    4
+   ],
+   "s": [
+    0,
+    1.875
+   ],
+   "feel": "ignition, then chaos builds: pings, 16th hats getting denser, riser, stutter"
+  },
+  {
+   "name": "FREEZE",
+   "beats": [
+    4,
+    8
+   ],
+   "s": [
+    1.875,
+    3.75
+   ],
+   "feel": "HARD STOP at b4 (silence / tape-stop). only ticks + low drone"
+  },
+  {
+   "name": "REFRAME",
+   "beats": [
+    8,
+    13.5
+   ],
+   "s": [
+    3.75,
+    6.328
+   ],
+   "feel": "reverse swell b8\u2192b9, DROP at b9, warm half-time pulse"
+  },
+  {
+   "name": "AXIOMS",
+   "beats": [
+    13.5,
+    24
+   ],
+   "s": [
+    6.328,
+    11.25
+   ],
+   "feel": "7 accents every 1.5 beats (dotted-quarter), driving"
+  },
+  {
+   "name": "LOOP",
+   "beats": [
+    24,
+    28
+   ],
+   "s": [
+    11.25,
+    13.125
+   ],
+   "feel": "accelerating riser, ticks speed up with the orbit"
+  },
+  {
+   "name": "IMPACT+END",
+   "beats": [
+    28,
+    32
+   ],
+   "s": [
+    13.125,
+    15.0
+   ],
+   "feel": "big impact at b28, then warm resolve pad, soft pulses b30/b31"
+  }
+ ],
+ "freeze_ticks": [
+  4.5,
+  5.5,
+  6.5,
+  7.25,
+  7.75
+ ],
+ "axiom_hits": [
+  13.5,
+  15.0,
+  16.5,
+  18.0,
+  19.5,
+  21.0,
+  22.5
+ ],
+ "loop_node_hits": [
+  24.718,
+  25.056,
+  25.322,
+  25.551,
+  25.756,
+  25.943,
+  26.117,
+  26.28,
+  26.434,
+  26.581,
+  26.722,
+  26.856,
+  26.986,
+  27.112,
+  27.233,
+  27.351,
+  27.466,
+  27.578,
+  27.687,
+  27.794,
+  27.898,
+  28.0
+ ],
+ "key_hits": {
+  "ignite": 0,
+  "tab_counter_start": 2,
+  "glitch_peak": 3.5,
+  "hard_stop": 4,
+  "finite_word": 5.5,
+  "drop": 9,
+  "all_you_need_word": 10,
+  "impact": 28,
+  "well_word": 28.75,
+  "wordmark": 29.75
+ },
+ "key_hits_s": {
+  "ignite": 0.0,
+  "tab_counter_start": 0.938,
+  "glitch_peak": 1.641,
+  "hard_stop": 1.875,
+  "finite_word": 2.578,
+  "drop": 4.219,
+  "all_you_need_word": 4.688,
+  "impact": 13.125,
+  "well_word": 13.477,
+  "wordmark": 13.945
+ },
+ "axiom_hits_s": [
+  6.328,
+  7.031,
+  7.734,
+  8.438,
+  9.141,
+  9.844,
+  10.547
+ ]
+}

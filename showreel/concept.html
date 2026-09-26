@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Axioms Concept</title>
+<style>
+  @font-face { font-family: "Inter Tight"; font-weight: 800; src: url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2); }
+  @font-face { font-family: "Inter Tight"; font-weight: 600; src: url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2); }
+  @font-face { font-family: "Inter"; font-weight: 500; src: url(node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2); }
+  @font-face { font-family: "JetBrains Mono"; font-weight: 500; src: url(node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-500-normal.woff2); }
+  html, body { margin: 0; background: #ddd; height: 100%; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { height: 100vh; width: auto; aspect-ratio: 9 / 16; display: block; }
+  body.render canvas { height: 1920px; }
+  #hud { position: fixed; left: 12px; bottom: 12px; color: #555; font: 12px monospace; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div id="hud"></div>
+<script src="concept.js"></script>
+</body>
+</html>
